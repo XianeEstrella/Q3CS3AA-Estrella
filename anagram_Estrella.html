@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Anagram Alternative Assessment</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body {
+                background-color: hotpink;
+                color: white;
+            }
+        </style>
+
+    </head>
+
+<body>
+
+    <h1>Program to Check whether Two Strings are Anagrams of Each Other</h1>
+
+<script>
+
+	function checkAnagrams(word1, word2) {
+
+  	word1 = word1.replace(/[^A-Za-z]/g, "").toLowerCase();
+  	word2 = word2.replace(/[^A-Za-z]/g, "").toLowerCase();
+
+  	return word1.split("").sort().join("") === word2.split("").sort().join("");
+
+    }
+
+	var firstWord = prompt("Input first word: ");
+	var secondWord = prompt("Input second word: ");
+
+	var result = checkAnagrams(firstWord, secondWord);
+
+	if (result==true){
+		alert("The words are anagrams of each other");
+	} else {
+		alert("The words are not anagrams of each other");
+	}  
+   
+    </script>
+    </body>
+</html>
+
+    
