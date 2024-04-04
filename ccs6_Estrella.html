@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>
+            Coding Challenge 6
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1 id="title">Quadratic Formula</h1>
+
+        <button onclick="solve()">Find the root</button>
+
+        <h4 id="result"></h4>
+        
+        <script>
+
+            document.getElementById("title").innerHTML = "Quadratic Formula";
+
+            function solve(){
+                var a = prompt("Input the value of a: ");
+                var b = prompt("Input the value of b: ");
+                var c = prompt("Input the value of c: ");
+
+                var discriminant = (Math.pow(b,2)) - (4 * a * c);
+
+                if (discriminant == 0){
+                    (result = ((-1 * b) + (Math.sqrt(discriminant))) / (2 * a)) || (result = ((-1 * b) - (Math.sqrt(discriminant))) / (2 * a));
+                    document.getElementById("result").innerHTML = "Result: " + result;
+
+                } else if (discriminant > 0){
+                    result1 = ((-1 * b) + (Math.sqrt(discriminant))) / (2 * a);
+                    result2 = ((-1 * b) - (Math.sqrt(discriminant))) / (2 * a);
+                    document.getElementById("result").innerHTML = "The roots are " + result1 + " and " + result2 + ".";
+                
+                } else if (discriminant < 0){
+                    document.getElementById("result").innerHTML = "The roots are imaginary numbers.";
+                }
+            }
+        </script>
+    </body>
+</html>
